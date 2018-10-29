@@ -1,0 +1,31 @@
+<html>
+
+<head>
+<title>Learn Dvorak</title>
+<script type="text/javascript" src="jquery-1.12.0.min.js"></script>
+</head>
+
+
+<body>
+<div id="typed">
+Here: 
+</div>
+
+
+<script>
+$(document).ready(function() {
+	console.log("I'm ready!");
+	document.onkeypress = function(evt) {
+		evt = evt || window.event;
+		var charCode = evt.keyCode || evt.which;
+		var charStr = String.fromCharCode(charCode);
+		$("#typed").append(charStr);
+		//alert(charStr);
+		document.getElementByID("typed").insertAdjacentHTML('beforeend', charStr);
+	};
+});
+</script>
+
+
+</body>
+</html>
