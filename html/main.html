@@ -7,6 +7,9 @@
 
 
 <body>
+
+<div id="status">Type...</div>
+
 <div id="typed">
 Here: 
 </div>
@@ -21,8 +24,18 @@ $(document).ready(function() {
 		var charStr = String.fromCharCode(charCode);
 		$("#typed").append(charStr);
 		//alert(charStr);
-		document.getElementByID("typed").insertAdjacentHTML('beforeend', charStr);
+		//document.getElementByID("typed").insertAdjacentHTML('beforeend', charStr);
 	};
+	
+	order = ['aoeuth', 'n', 'i', 's', 'd', 'l', 'r', 'c', 'g', 'p', 'yf', 'km', 'xb','qv', 'jw']
+	
+	for (var keys in order) {
+		
+		for (var key in keys) {
+			$("#status").html("Type words with: "+keys+" especially "+key)
+			
+		}
+	}
 });
 </script>
 
